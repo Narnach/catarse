@@ -17,7 +17,7 @@ module Catarse
     #NOTE: the custom view path is for build a new style without need to
     # edit the catarse_views
     config.paths['app/views'].unshift(
-      "#{Rails.root}/app/views/custom", 
+      "#{Rails.root}/app/views/custom",
       "#{Rails.root}/app/views/catarse_bootstrap")
 
     config.active_record.schema_format = :sql
@@ -29,8 +29,8 @@ module Catarse
     config.encoding = "utf-8"
 
     config.filter_parameters += [:password, :password_confirmation]
-    config.time_zone = 'Brasilia'
-    config.active_record.default_timezone = :local
+    config.time_zone = 'Amsterdam'
+    config.active_record.default_timezone = :utc
     config.generators do |g|
       g.test_framework :rspec, fixture: false, views: false
     end
